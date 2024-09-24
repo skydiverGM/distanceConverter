@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Distance Converter");
-        System.out.println("V 1.0");
+        System.out.println("V 1.1");
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
