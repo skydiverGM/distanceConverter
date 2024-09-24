@@ -14,6 +14,7 @@ public class Main {
         while (true) {
             System.out.println("Choose operation:");
             System.out.println("Enter 1 to convert miles to kilometers");
+            System.out.println("Enter 2 to convert kilometers to miles");
             System.out.println("Enter 0 to exit");
             int choice = scanner.nextInt();
 
@@ -35,8 +36,12 @@ public class Main {
                     double km = milesToKm(number);
                     System.out.println(number + " miles = " + km + " km");
                     break;
+                case 2:
+                    double miles = kmToMiles(number);
+                    System.out.println(number + " km = " + miles + " miles");
+                    break;
                 default:
-                    System.out.println("Please, enter 1 to convert or 0 to exit");
+                    System.out.println("Please, enter 1 or 2 to convert or 0 to exit");
             }
         }
         scanner.close();
@@ -44,6 +49,9 @@ public class Main {
     }
     private static double milesToKm(double miles){
         return miles * CONV_M;
+    }
+    private static double kmToMiles(double km){
+        return km / CONV_M;
     }
 
 }
